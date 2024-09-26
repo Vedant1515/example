@@ -1,0 +1,12 @@
+
+h1, h2, .content, nav ul, footer {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

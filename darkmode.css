@@ -1,0 +1,289 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color, #f8f8f8);
+    color: var(--text-color, #333);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styles for body */
+body.dark-mode {
+    --background-color: #333;
+    --text-color: #fff;
+}
+
+/* Header styles */
+header {
+    background-color: var(--header-background, #0072ce);
+    color: var(--header-text-color, white);
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+header.dark-mode {
+    --header-background: #444;
+    --header-text-color: #fff;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--footer-background, #333);
+    color: var(--footer-text-color, white);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+footer.dark-mode {
+    --footer-background: #111;
+    --footer-text-color: #fff;
+}
+
+/* Promo banner */
+#promo-banner {
+    background-color: var(--promo-background, #ffcc00);
+    text-align: center;
+    padding: 30px 10px;
+    margin-bottom: 20px;
+}
+
+#promo-banner.dark-mode {
+    --promo-background: #555; /* Dark mode banner color */
+}
+
+/* Product, deal, and news containers */
+.product, .deal-info, .news-info {
+    background-color: var(--container-background, white);
+    border: 1px solid var(--container-border, #ddd);
+    color: var(--container-text-color, #333);
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body.dark-mode .product, 
+body.dark-mode .deal-info, 
+body.dark-mode .news-info {
+    --container-background: #444; /* Dark background */
+    --container-border: #555; /* Darker border */
+    --container-text-color: #fff; /* Light text */
+}
+
+/* Dark mode toggle slider styles */
+.dark-mode-label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dark-mode-label input {
+    display: none; /* Hide the default checkbox */
+}
+
+.dark-mode-label .slider {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode-label input:checked + .slider {
+    background-color: #444; /* Dark background when checked */
+}
+
+.symbol {
+    font-size: 18px;
+    transition: opacity 0.3s ease;
+}
+
+.symbol.light {
+    opacity: 1; /* Sun visible by default */
+}
+
+.symbol.dark {
+    opacity: 0; /* Moon hidden by default */
+}
+
+.dark-mode-label input:checked + .slider .symbol.light {
+    opacity: 0; /* Hide sun when checked */
+}
+
+.dark-mode-label input:checked + .slider .symbol.dark {
+    opacity: 1; /* Show moon when checked */
+}
+/* Dark Mode Styles */
+
+/* Body Style */
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text */
+}
+
+/* Header Style */
+header {
+    background-color: #1f1f1f; /* Darker header */
+    color: #ffffff; /* Light text */
+}
+
+/* Main Style */
+main {
+    padding: 20px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact-info, .feedback-form {
+    background-color: #1e1e1e; /* Dark container background */
+    color: #ffffff; /* Light text color */
+    padding: 20px;
+    border: 1px solid #333; /* Slightly lighter border */
+    border-radius: 8px;
+    flex: 1;
+}
+
+.contact-info h2, .feedback-form h3 {
+    color: #ffffff; /* Ensure headings are white */
+}
+
+.feedback-form input, .feedback-form textarea {
+    background-color: #333; /* Dark input backgrounds */
+    color: #ffffff; /* Light text in inputs */
+    border: 1px solid #444; /* Darker border for inputs */
+}
+
+.feedback-form button {
+    background-color: #0072ce; /* Keep button color */
+}
+
+.feedback-form button:hover {
+    background-color: #005bb5; /* Keep hover color */
+}
+
+/* Footer Style */
+footer {
+    background-color: #1f1f1f; /* Dark footer background */
+    color: #ffffff; /* Light text */
+}
+
+footer nav ul li a {
+    color: white; /* Ensure footer links are white */
+}
+
+/* Search Bar Style */
+#search-bar {
+    background: #333; /* Dark search bar background */
+}
+
+#search-bar input[type="text"] {
+    background-color: #444; /* Dark input background */
+    color: #ffffff; /* Light text */
+    border: 1px solid #555; /* Dark border */
+}
+
+#search-bar button {
+    background-color: #0072ce; /* Keep button color */
+}
+
+#search-bar button:hover {
+    background-color: #005bb5; /* Keep hover color */
+}
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header.dark-mode, footer.dark-mode {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+h1, h2, h3, h4, h5, h6.dark-mode {
+    color: #e0e0e0;
+}
+
+.dark-mode a {
+    color: #bb86fc;
+}
+
+.dark-mode p, .dark-mode span {
+    color: #e0e0e0;
+}
+
+.dark-mode .box {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    border: 1px solid #333;
+}
+
+.dark-mode .intro {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+.dark-mode .linkedin-link {
+    color: #bb86fc;
+}
+
+/* Add any specific sections from about.html to ensure consistency */
+.dark-mode .content {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    border-color: #333;
+}
+/* Styles for location form */
+#location-form {
+    margin-bottom: 20px;
+    background-color: var(--location-form-background, white); /* Default light background */
+    padding: 20px;
+    border: 1px solid var(--location-form-border, #ddd);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+body.dark-mode #location-form {
+    --location-form-background: #444; /* Dark background */
+    --location-form-border: #555; /* Darker border */
+}
+
+/* Form input and select styles */
+#location-form input[type="text"],
+#location-form select {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid var(--input-border-color, #ccc);
+    background-color: var(--input-background, #fff);
+    color: var(--input-text-color, #333);
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body.dark-mode #location-form input[type="text"],
+body.dark-mode #location-form select {
+    --input-border-color: #666; /* Darker border */
+    --input-background: #555; /* Dark background */
+    --input-text-color: #fff; /* Light text */
+}

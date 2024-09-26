@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script defer src="get-products.js"></script> 
+    <script defer src="darkmode.js"></script>
+    <link rel="stylesheet" href="darkmode.css">
+</head>
+<header>
+
+    <label class="dark-mode-label">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider">
+            <span class="symbol light">☀️</span>
+            <span class="symbol dark">🌙</span>
+        </span>
+    </label>
+</header>
+<body>
+    <h1>Our Products</h1>
+
+    <input type="text" id="searchBox" placeholder="Search products by name..." oninput="filterProducts()">
+
+    <div id="productList">
+    </div>
+
+    <p id="noProductsMessage" style="display: none;">No products found.</p>
+
+</body>
+</html>

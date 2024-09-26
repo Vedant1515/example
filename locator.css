@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Style */
+header {
+    background-color: #0072ce;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Search Bar Style */
+#search-bar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#search-bar input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+#search-bar button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #005bb5;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#search-bar button:hover {
+    background-color: #004494;
+}
+
+/* Main Style */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+#location-form {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#location-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#location-form input[type="text"], #location-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#location-form button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #0072ce;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#location-form button:hover {
+    background-color: #005bb5;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+}
+
+/* Footer Style */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    margin: 0 15px;
+}
+
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+}
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color, #f8f8f8); /* Light mode background */
+    color: var(--text-color, #333); /* Light mode text color */
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styles for body */
+body.dark-mode {
+    --background-color: #333; /* Dark background */
+    --text-color: #fff; /* Light text */
+}
+
+/* Header styles */
+header {
+    background-color: var(--header-background, #0072ce); /* Light mode header */
+    color: var(--header-text-color, white);
+    padding: 20px 0;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header.dark-mode {
+    --header-background: #444; /* Dark mode header */
+    --header-text-color: #fff; /* Light text for dark mode */
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--footer-background, #333); /* Light mode footer */
+    color: var(--footer-text-color, white);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer.dark-mode {
+    --footer-background: #111; /* Dark mode footer */
+    --footer-text-color: #fff; /* Light text for dark mode */
+}
+
+/* Location form styles */
+#location-form {
+    margin-bottom: 20px;
+    background-color: var(--location-form-background, #fff); /* Light mode form background */
+    padding: 20px;
+    border: 1px solid var(--location-form-border, #ddd);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+body.dark-mode #location-form {
+    --location-form-background: #444; /* Dark mode form background */
+    --location-form-border: #555; /* Dark mode border color */
+}
+
+/* Form input and select styles */
+#location-form input[type="text"], 
+#location-form select {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid var(--input-border-color, #ccc); /* Light mode border */
+    background-color: var(--input-background, #fff); /* Light mode input background */
+    color: var(--input-text-color, #333); /* Light mode input text */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body.dark-mode #location-form input[type="text"], 
+body.dark-mode #location-form select {
+    --input-border-color: #666; /* Dark mode border color */
+    --input-background: #555; /* Dark mode input background */
+    --input-text-color: #fff; /* Dark mode input text color */
+}
+
+/* Submit button styles */
+#location-form button {
+    padding: 10px 20px;
+    background-color: var(--button-background, #0072ce); /* Light mode button background */
+    color: var(--button-text-color, white); /* Light mode button text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode #location-form button {
+    --button-background: #005bb5; /* Dark mode button background */
+}
+
+/* Map container styles */
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Dark mode toggle styles */
+.dark-mode-label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dark-mode-label input {
+    display: none; /* Hide the checkbox */
+}
+
+.dark-mode-label .slider {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: #ddd; /* Light background for the slider */
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode-label input:checked + .slider {
+    background-color: #444; /* Dark background when checked */
+}
+
+.symbol {
+    font-size: 18px;
+    transition: opacity 0.3s ease;
+}
+
+.symbol.light {
+    opacity: 1; /* Sun visible by default */
+}
+
+.symbol.dark {
+    opacity: 0; /* Moon hidden by default */
+}
+
+.dark-mode-label input:checked + .slider .symbol.light {
+    opacity: 0; /* Hide sun when checked */
+}
+
+.dark-mode-label input:checked + .slider .symbol.dark {
+    opacity: 1; /* Show moon when checked */
+}
+
+/* Apply the dark mode to the map container if necessary */
+body.dark-mode #map {
+    background-color: #222; /* Dark fallback background for the map */
+    transition: background-color 0.3s ease;
+}

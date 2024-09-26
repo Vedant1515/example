@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Supermarket</title>
+    
+    <link rel="stylesheet" href="product.css">
+    <script defer src="product.js"></script>
+    <link rel="stylesheet" href="dark.css">
+</head>
+<body>
+    <header>
+        <label class="dark-mode-label">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider">
+                <span class="symbol light">☀️</span>
+                <span class="symbol dark">🌙</span>
+            </span>
+        </label>
+        <h1>Supermarket</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="locator.html">Store Locator</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="account.html">Customer Account</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+        <div id="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <main>
+        <h2>Products</h2>
+        <div class="filter">
+            <button onclick="filterProducts('all')">All</button>
+            <button onclick="filterProducts('electronics')">Electronics</button>
+            <button onclick="filterProducts('groceries')">Groceries</button>
+            <button onclick="filterProducts('clothing')">Clothing</button>
+            <button onclick="filterProducts('home')">Home & Kitchen</button>
+            <button onclick="filterProducts('sports')">Sports & Outdoors</button>
+            <button onclick="filterProducts('toys')">Toys</button>
+        </div>
+        
+        <div id="product-container" class="product-grid">
+            <!-- Products will be dynamically loaded here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Supermarket. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="locator.html">Store Locator</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="account.html">Customer Account</a></li>
+            </ul>
+        </nav>
+    </footer>
+    
+    <script src="darkmode.js"></script>
+    
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Product Title</h2>
+            <p id="modal-description">Product description will go here.</p>
+        </div>
+    </div>
+    
+    <script>
+        function addToCart(name, price, quantity) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const itemIndex = cart.findIndex(item => item.name === name);
+
+            if (itemIndex > -1) {
+                // Update quantity if the item already exists in the cart
+                cart[itemIndex].quantity += parseInt(quantity);
+            } else {
+                // Add new item to the cart
+                cart.push({ name, price, quantity: parseInt(quantity) });
+            }
+
+            // Save updated cart to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${quantity} of ${name} added to cart!`); // Optional alert for user feedback
+        }
+
+        // Fetch products and populate the product grid
+        fetch('/api/products')
+            .then(response => response.json())
+            .then(products => {
+                const productContainer = document.getElementById('product-container');
+                products.forEach(product => {
+                    const productDiv = document.createElement('div');
+                    productDiv.className = 'product-item';
+                    productDiv.innerHTML = `
+                        <div class="product-image-container">
+                            <img src="${product.image}" alt="${product.name}">
+                        </div>
+                        <h3>${product.name}</h3>
+                        <p>${product.description}</p>
+                        <p>Price: $${product.price}</p>
+                        <input type="number" value="1" min="1" id="quantity-${product.id}">
+                        <button onclick="addToCart('${product.name}', ${product.price}, document.getElementById('quantity-${product.id}').value)">Add to Cart</button>
+                    `;
+                    productContainer.appendChild(productDiv);
+                });
+            })
+            .catch(error => console.error('Error fetching products:', error));
+    </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light mode background */
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #0072ce; /* Light mode header color */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #333; /* Default header color */
+}
+
+.cart-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-item {
+    display: flex;
+    gap: 15px;
+    background-color: white; /* Light mode item background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.cart-item img {
+    border-radius: 8px;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-details h4 {
+    margin-bottom: 10px;
+    color: #333; /* Default item title color */
+}
+
+.item-details p {
+    margin-bottom: 8px;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0072ce; /* Light mode button color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+.remove-button {
+    background-color: #e74c3c; /* Light mode remove button color */
+}
+
+.remove-button:hover {
+    background-color: #c0392b;
+}
+
+.cart-total {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.cart-total h3 {
+    color: #333; /* Default total price color */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212; /* Dark mode background */
+    color: #e0e0e0; /* Light text color for readability */
+}
+
+header.dark-mode {
+    background-color: #1f1f1f; /* Dark mode header color */
+    color: #e0e0e0; /* Light text color */
+}
+
+nav ul li a.dark-mode {
+    color: #e0e0e0; /* Light text color for links in dark mode */
+}
+
+h2.dark-mode {
+    color: #ffffff; /* White color for "Items in Your Cart" in dark mode */
+}
+
+.cart-item {
+    background-color: white; /* Light mode item background */
+}
+
+/* Dark mode item background */
+body.dark-mode .cart-item {
+    background-color: #1f1f1f; /* Dark mode item background */
+    color: #e0e0e0; /* Light text color for items */
+}
+
+.item-details h4 {
+    color: #333; /* Default item title color */
+}
+
+/* Light mode item details color */
+body.dark-mode .item-details h4 {
+    color: #e0e0e0; /* Light text color for item titles in dark mode */
+}
+
+.item-details p {
+    color: #333; /* Default item details color */
+}
+
+/* Light mode item details color */
+body.dark-mode .item-details p {
+    color: #e0e0e0; /* Light text color for item details in dark mode */
+}
+
+button {
+    background-color: #3a3a3a; /* Dark mode button color */
+}
+
+.remove-button {
+    background-color: #c0392b; /* Dark mode remove button color */
+}
+
+.cart-total h3 {
+    color: #e0e0e0; /* Light text color for total in dark mode */
+}
+
+footer {
+    background-color: #1f1f1f; /* Dark mode footer color */
+    color: #e0e0e0; /* Light text color */
+}

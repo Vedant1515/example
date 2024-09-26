@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Account - Supermarket</title>
+    <link rel="stylesheet" href="account.css">        
+    <script defer src="darkmode.js"></script>
+    <link rel="stylesheet" href="dark.css">
+</head>
+<body>
+    <header>
+
+        <label class="dark-mode-label">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider">
+                <span class="symbol light">☀️</span>
+                <span class="symbol dark">🌙</span>
+            </span>
+        </label>
+        <h1>Supermarket</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="locator.html">Store Locator</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="account.html">Customer Account</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+        <div id="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <main>
+        <h2>Customer Account</h2>
+
+        <div class="signup-box">
+            <h3>Sign Up</h3>
+            <form id="signupForm" action="/submit-signup" method="POST">
+                <div>
+                    <label for="signupUsername">Username:</label>
+                    <input type="text" id="signupUsername" name="username" required>
+                </div>
+
+                <div>
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" name="email" required>
+                </div>
+
+                <div>
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" name="password" required>
+                </div>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+        <div class="account-box">
+            <h3>Login</h3>
+            <form id="loginForm" action="/submit-login" method="POST">
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <button type="submit">Login</button>
+
+                <div class="additional-links">
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Supermarket. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="locator.html">Store Locator</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="account.html">Customer Account</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="account_valid.js"></script>
+</body>
+</html>

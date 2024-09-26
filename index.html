@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dark.css">
+    
+</head>
+
+<body>
+    <header>
+        <h1>Supermarket</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="locator.html">Store Locator</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="account.html">Customer Account</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+        <label class="dark-mode-label">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider">
+                <span class="symbol light">☀️</span>
+                <span class="symbol dark">🌙</span>
+            </span>
+        </label>
+        
+        <div id="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <!-- Sun-Moon Sidebar Toggle -->
+    <div class="theme-toggle" id="theme-toggle">
+        <i id="theme-icon" class="fas fa-sun"></i>
+    </div>
+
+    <main>
+        <section id="promo-banner">
+            <h2>Welcome to Our Supermarket</h2>
+            <p>Discover amazing deals and fresh products!</p>
+        </section>
+        <section id="featured-products">
+            <h3>Featured Products</h3>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="https://picsum.photos/300/201" alt="Product 1">
+                    <h4>Mario Toy</h4>
+                    <p>Description of Mario Toy. This is a high-quality
+                        product that meets all your needs.</p>
+                    <p><strong>$19.99</strong></p>
+                </div>
+                <div class="product">
+                    <img src="https://picsum.photos/301/200" alt="Product 2">
+                    <h4>Laptop</h4>
+                    <p>Description of Laptop. Featuring the latest in
+                        innovation and design.</p>
+                    <p><strong>$29.99</strong></p>
+                </div>
+                <div class="product">
+                    <img src="https://picsum.photos/300/200" alt="Product 3">
+                    <h4>Dish Washer Liquid</h4>
+                    <p>Description of Dish Washer Liquid. Perfect for all your
+                        everyday needs.</p>
+                    <p><strong>$15.99</strong></p>
+                </div>
+            </div>
+        </section>
+        <section id="latest-deals">
+            <h3>Latest Deals</h3>
+            <div class="deal-box">
+                <img src="https://picsum.photos/400/200" alt="Deal 1">
+                <div class="deal-info">
+                    <h4>50% Off on Selected Items!</h4>
+                    <p>Take advantage of our amazing discounts on selected
+                        items. Shop now and save big!</p>
+                </div>
+            </div>
+        </section>
+        <section id="store-news">
+            <h3>Store News</h3>
+            <div class="news-box">
+                <img src="https://picsum.photos/400/202" alt="News 1">
+                <div class="news-info">
+                    <h4>New Store Opening Soon!</h4>
+                    <p>We are excited to announce the opening of our new store
+                        in the downtown area. Stay tuned for the grand opening date!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Supermarket. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="locator.html">Store Locator</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="account.html">Customer Account</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <!-- Font Awesome for Sun and Moon Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="dark.js"></script>
+</body>
+
+</html>
